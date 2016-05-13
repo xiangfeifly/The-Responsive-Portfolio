@@ -1,13 +1,16 @@
-html,body,ul,li,h1,h2,h3,h4,h5,h6,img,p {
-    color:#777;
-    font-family:Arial,Helvetica,sans-serif;
-    margin:0;
-    padding:0;
+/* ------ Red Text = #e46965 ------ */
+/* ------ Gray Text = #777 ------*/
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6, img, p {
+    color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-size:14px;
-    letter-spacing:0.2px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,43 +18,111 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya Sans', sans-serif;
 }
 
+h2 {
+    color: #e46965;
+    font-size:40px;
+    font-weight:normal;
+    margin:15px 0;
+}
 .container {
-    max-width:900px;
-    margin:0 auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* -------------MAIN NAVIGATION ------------- */
 nav {
     background-color: #dadada;
-    height:40px;
+    height: 40px;
 }
 
-.nav-list, .social-list{
-    list-style:none;
+.nav-list, .social-list {
+    list-style: none;
 }
+
 .nav-list li, .social-list li {
     float: left;
 }
 
 .nav-list {
-    padding-top:10px;
-    float:left; /* 为什么加了这个后social-list的排列就正常了？*/
+    padding-top: 10px;
+    float: left;
+    /* 为什么加了这个后social-list的排列就正常了？
+    不加float:left的话，social-list就会在nav-list下面一行渲染*/
 }
+
 .nav-list li a {
-    color:#fff;
-    text-decoration:none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .nav-list li {
-    margin-right:20px;
+    margin-right: 20px;
 }
+
 .social-list {
-    margin-top:5px;
-    float:right;
+    margin-top: 5px;
+    float: right;
 }
 
 .social-list li {
-    margin-left:20px;
+    margin-left: 20px;
+}
+
+/*------ header ------*/
+header h1, header h3{
+    font-weight:normal;
+    text-align:center;
+}
+
+header h1 {
+    font-size:44px;
+    margin-top:20px;
+}
+header h3 {
+    color: #e46965;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+/*------ feature section ------*/
+.feature {
+    background-color:#363636;
+}
+
+.feature-list {
+    list-style: none;
+    background:url("../images/feature-bg.jpg") top center no-repeat;
+    height:300px;
 
 }
+.feature-list li {
+    float: left;
+    width:33.3333%;
+    height:300px;
+    text-align:center;
+    padding-top: 100px;
+    border-left:1px solid white;
+    box-sizing:border-box;
+}
+
+.feature-list li:last-child {
+    border-right:1px solid white;
+}
+
+.feature-list li a {
+    text-decoration:none;
+}
+
+.feature-title {
+    color:white;
+    opacity:0.5;
+    font-weight:normal;
+    font-size:20px;
+    margin-top:5px;
+}
+
+.feature-list li a:hover .feature-title{
+    opacity:1;
+}
+
 
