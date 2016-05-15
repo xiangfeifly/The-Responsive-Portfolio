@@ -4,10 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Response Portfolio</title>
     <link rel="stylesheet" href="styles/site.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
 </head>
 <body>
 <nav>
     <div class="container">
+        <img src="images/menu.png" alt="menu" class="menu">
         <ul class="nav-list">
             <li><a href="#">HOME</a></li>
             <li><a href="#">WORK</a></li>
@@ -27,19 +29,19 @@
 </header>
 <section class="feature">
     <ul class="feature-list container">
-        <li>
+        <li class="feature-web">
             <a href="#">
                 <img class="feature-icon" src="images/web.png" alt="Eeb Design">
                 <h3 class="feature-title">WEB DESIGN</h3>
             </a>
         </li>
-        <li>
+        <li class="feature-graphic">
             <a href="#">
                 <img class="feature-icon" src="images/graphic.png" alt="Graphic Design">
                 <h3 class="feature-title">GRAPHIC DESIGN</h3>
             </a>
         </li>
-        <li>
+        <li class="feature-video">
             <a href="#">
                 <img class="feature-icon" src="images/video.png" alt="Video Production">
                 <h3 class="feature-title">VIDEO PRODUCTION</h3>
@@ -106,7 +108,7 @@
         <div class="col-one-third registration">
             <h3>Register for Updates</h3>
             <form>
-                <input type="text" id="name" placeholder="Name" >
+                <input type="text" id="name" placeholder="Name">
                 <input type="text" id="email" placeholder="Email@address.com">
                 <button type="submit">SUBCRIBE</button>
             </form>
@@ -115,5 +117,24 @@
     </div><!-- container -->
     <span class="copyright">&copy;copyright 2014, My Portfolio Design</span>
 </footer>
+
+<script>
+    $(function () {
+        $nav = $('.nav-list');
+
+        $('.menu').click(function(){
+            $nav.slideToggle();
+        });
+
+        $(window).resize(function(){
+            if ($(window).width() >= 662) {
+                $nav.show();
+            } else {
+                $nav.hide();
+            }
+        });
+    });
+
+</script>
 </body>
 </html>
